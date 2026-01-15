@@ -103,4 +103,4 @@ st.markdown("""
 ➡️ **비표면적과 기공 구조가 탄소 포집 효율에 결정적인 영향을 미친다.**
 """)
 
-st.success("✔️ 탄소 포집 실험 Streamlit 분석 완료")
+st.success
