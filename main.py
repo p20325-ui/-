@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="실험 활동 모음", layout="wide")
 
 experience = st.selectbox(
     "실험(활동)을 선택해주세요:",
