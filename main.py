@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 
+experience = st.selectbox('실험(활동)을 선택해주세요:', ['탄소포집 실험','아스피린 실험','이항분포기 만들기 활동'
+])
+
 \
 data = {
     "시간(분)": list(range(21)),
