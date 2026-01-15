@@ -35,7 +35,7 @@ if experience == "탄소포집 실험":
         time = st.slider("확인할 시간을 선택하세요 (분)", 0, 20, 10)
         selected = df[df["시간(분)"] == time]
 
-        st.write(f"⏱ **{time}분 후 CO₂ 농도 (ppm)**")
+        st.write(f" **{time}분 후 CO₂ 농도 (ppm)**")
         st.table(selected.set_index("시간(분)"))
 
         st.header("4. CO₂ 제거 효율 분석")
