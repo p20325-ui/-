@@ -71,7 +71,10 @@ elif experience == "이항분포기 만들기 활동":
         이항분포기는 성공 또는 실패의 두 가지 결과만 가지는 시행을
         여러 번 반복할 때 성공 횟수의 확률 분포를 나타낸다.
         """)
-        st.image("https://search.naver.com/search.naver?ssc=tab.image.all&where=image&sm=tab_jum&query=%EC%9D%B4%ED%95%AD%EB%B6%84%ED%8F%AC%EA%B8%B0#imgId=image_sas%3Anshopping_f8bed14f5cf116659f63adc2b9bd407a", caption="이항분포")
+        st.image(
+        "https://shopping-phinf.pstatic.net/main_1234567/1234567.jpg",
+        caption="이항분포기")
+
 
         st.header("2. 이항분포기를 어떻게 만들었는가")
         st.markdown("""
