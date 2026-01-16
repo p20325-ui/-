@@ -65,8 +65,8 @@ elif experience == "이항분포기 만들기 활동":
             "시행 횟수": list(range(8)),
             "성공할 확률": [1/64, 6/64, 15/64, 20/64, 15/64, 6/64, 1/64]
         }
-        df = pd.DataFrame(data)
 
+        df = pd.DataFrame(data)
 
         st.header("1. 이항분포기란 무엇인가")
         st.markdown("""
