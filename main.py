@@ -83,6 +83,4 @@ elif experience == "이항분포기 만들기 활동":
         """)
 
         st.header("3. 이항분포 그래프")
-        df = pd.DataFrame(data)
-        st.bar_chart(df.set_index("시행 횟수"))
         st.line_chart(df[["시행 횟수", "성공할 확률"]].set_index("시행 횟수"))
