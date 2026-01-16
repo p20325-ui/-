@@ -78,12 +78,6 @@ elif experience == "이항분포기 만들기 활동":
         - 시행 횟수와 성공 확률을 정하여 분포를 이해하였다.
         """)
 
-        st.header("3. 이 활동을 통해 무엇을 배웠는가")
-        st.markdown("""
-        - 반복 실험에서 확률 분포가 형성됨을 이해했다.
-        - 수학 개념을 프로그래밍으로 표현할 수 있음을 배웠다.
-        """)
-
-        st.header("4. 이항분포 그래프")
+        st.header("3. 이항분포 그래프")
         df = pd.DataFrame(data)
         st.bar_chart(df.set_index("시행 횟수"))
