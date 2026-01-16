@@ -72,7 +72,7 @@ elif experience == "이항분포기 만들기 활동":
         여러 번 반복할 때 성공 횟수의 확률 분포를 나타낸다.
         """)
         st.image(
-        "https://shopping-phinf.pstatic.net/main_1234567/1234567.jpg",
+        "https://search.pstatic.net/common/?src=https%3A%2F%2Fshop-phinf.pstatic.net%2F20230407_168%2F1680856327670sCRVo_JPEG%2F3691230482399576_1611206889.jpeg&type=sc960_832",
         caption="이항분포기")
 
 
