@@ -62,11 +62,9 @@ elif experience == "이항분포기 만들기 활동":
         st.title("이항분포기 만들기 활동")
 
         data = {
-            "시행 횟수": list(range(8)),
+            "시행 횟수": list(range(7)),
             "성공할 확률": [1/64, 6/64, 15/64, 20/64, 15/64, 6/64, 1/64]
         }
-
-        df = pd.DataFrame(data)
 
         st.header("1. 이항분포기란 무엇인가")
         st.markdown("""
@@ -87,4 +85,5 @@ elif experience == "이항분포기 만들기 활동":
         """)
 
         st.header("4. 이항분포 그래프")
+        df = pd.DataFrame(data)
         st.bar_chart(df.set_index("시행 횟수"))
