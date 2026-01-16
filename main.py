@@ -63,11 +63,21 @@ elif experience == "이항분포기 만들기 활동":
 
     if st.button("데이터 생성"):
         st.title(" 이항분포기 만들기 활동")
+        import streamlit as st
+        import pandas as pd
+        import numpy as np
+
+
+         data = {
+        "시행 횟수": list(range(8)),
+        "성공할 확률": [1/64,6/64,15/64,20/64,15/64,6/64,1/64]
+                  }
 
         st.header("1. 이항분포기란 무엇인가")
         st.markdown("""
         이항분포기는 **성공 또는 실패의 두 가지 결과만 가지는 시행**을  
         여러 번 반복할 때, **성공 횟수의 확률 분포**를 나타내는 도구이다.
+        (확률과 통계의 이항분포 단원에서 자세히 배울 수 있다.)
         """)
         
         st.header("2. 이항분포기를 어떻게 만들었는가")
@@ -81,4 +91,5 @@ elif experience == "이항분포기 만들기 활동":
         - 반복 실험에서 확률 분포가 형성됨을 이해했다.
         - 수학 개념을 프로그래밍으로 표현할 수 있음을 배웠다.
         """)
+        st.bar_chart(data.set_index("시행횟수"))
 
