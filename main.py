@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-
 experience = st.selectbox(
     "실험(활동)을 선택해주세요:",
     ["탄소포집 실험", "이항분포기 만들기 활동"]
@@ -35,7 +34,7 @@ if experience == "탄소포집 실험":
         time = st.slider("확인할 시간을 선택하세요 (분)", 0, 20, 10)
         selected = df[df["시간(분)"] == time]
 
-        st.write(f" **{time}분 후 CO₂ 농도 (ppm)**")
+        st.write(f"{time}분 후 CO₂ 농도 (ppm)")
         st.table(selected.set_index("시간(분)"))
 
         st.header("4. CO₂ 제거 효율 분석")
@@ -55,41 +54,37 @@ if experience == "탄소포집 실험":
         - **활성탄**: 가장 높은 CO₂ 제거 효율  
         - **숯**: 중간 수준의 흡착 성능  
         - **흑연**: 거의 흡착되지 않음  
-
-        -> **비표면적과 기공 구조가 탄소 포집 효율을 결정**
         """)
 
 elif experience == "이항분포기 만들기 활동":
 
     if st.button("데이터 생성"):
-        st.title(" 이항분포기 만들기 활동")
-        import streamlit as st
-        import pandas as pd
-        import numpy as np
+        st.title("이항분포기 만들기 활동")
 
+        data = {
+            "시행 횟수": list(range(8)),
+            "성공할 확률": [1/64, 6/64, 15/64, 20/64, 15/64, 6/64, 1/64]
+        }
 
-         data = {
-        "시행 횟수": list(range(8)),
-        "성공할 확률": [1/64,6/64,15/64,20/64,15/64,6/64,1/64]
-                  }
 
         st.header("1. 이항분포기란 무엇인가")
         st.markdown("""
-        이항분포기는 **성공 또는 실패의 두 가지 결과만 가지는 시행**을  
-        여러 번 반복할 때, **성공 횟수의 확률 분포**를 나타내는 도구이다.
-        (확률과 통계의 이항분포 단원에서 자세히 배울 수 있다.)
+        이항분포기는 성공 또는 실패의 두 가지 결과만 가지는 시행을
+        여러 번 반복할 때 성공 횟수의 확률 분포를 나타낸다.
         """)
-        
+
         st.header("2. 이항분포기를 어떻게 만들었는가")
         st.markdown("""
         - 시행은 성공/실패 두 경우만 갖도록 설정하였다.
         - 시행 횟수와 성공 확률을 정하여 분포를 이해하였다.
         """)
-        
+
         st.header("3. 이 활동을 통해 무엇을 배웠는가")
         st.markdown("""
         - 반복 실험에서 확률 분포가 형성됨을 이해했다.
         - 수학 개념을 프로그래밍으로 표현할 수 있음을 배웠다.
         """)
-        st.bar_chart(data.set_index("시행횟수"))
 
+        st.header("4. 이항분포 그래프")
+        df = pd.DataFrame(data)
+        st.bar_chart(df.set_index("시행 횟수"))
