@@ -69,7 +69,7 @@ elif experience == "이항분포기 만들기 활동":
         st.header("1. 이항분포기란 무엇인가")
         st.markdown("""
         이항분포기는 성공 또는 실패의 두 가지 결과만 가지는 시행을
-        여러 번 반복할 때 성공 횟수의 확률 분포를 나타낸다.
+        여러 번 반복할 때 성공 횟수의 확률 분포를 나타내도록 도와주는 도구이다.
         """)
         st.image(
         "https://search.pstatic.net/common/?src=https%3A%2F%2Fshop-phinf.pstatic.net%2F20230407_168%2F1680856327670sCRVo_JPEG%2F3691230482399576_1611206889.jpeg&type=sc960_832",
